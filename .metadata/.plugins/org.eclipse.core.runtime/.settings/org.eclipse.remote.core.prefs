@@ -1,0 +1,11 @@
+connections/org.eclipse.remote.serial.core.connectionType/USB_TTL22/serial.baudRate=6
+connections/org.eclipse.remote.serial.core.connectionType/USB_TTL22/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/USB_TTL22/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/USB_TTL22/serial.portName=COM5
+connections/org.eclipse.remote.serial.core.connectionType/USB_TTL22/serial.stopBits=0
+connections/org.eclipse.remote.serial.core.connectionType/USB_ttl/serial.baudRate=6
+connections/org.eclipse.remote.serial.core.connectionType/USB_ttl/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/USB_ttl/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/USB_ttl/serial.portName=COM3
+connections/org.eclipse.remote.serial.core.connectionType/USB_ttl/serial.stopBits=0
+eclipse.preferences.version=1

@@ -1,0 +1,17 @@
+
+/*
+ *
+	*****************************
+	Author:Abdelrahman Elrayes
+	Origin Date:3/8/2023
+	Version: 1.0.0
+	SWC:UART
+
+	*****************************
+ */
+#ifndef MUART_MUART_PRIV_H_
+#define MUART_MUART_PRIV_H_
+
+
+
+#endif /* MUART_MUART_PRIV_H_ */

@@ -1,0 +1,38 @@
+/*
+ * MAFIO_int.h
+ *
+ *  Created on: Jul 24, 2023
+ *      Author: Elrayes
+ */
+
+#ifndef MAFIO_MAFIO_INT_H_
+#define MAFIO_MAFIO_INT_H_
+
+#define AFIO_GPIOA   0b0000
+#define AFIO_GPIOB   0b0001
+#define AFIO_GPIOC   0b0010
+
+
+typedef enum {
+AFIO_EXTI_0 = 0,
+AFIO_EXTI_1,
+AFIO_EXTI_2,
+AFIO_EXTI_3,
+AFIO_EXTI_4,
+AFIO_EXTI_5,
+AFIO_EXTI_6,
+AFIO_EXTI_7,
+AFIO_EXTI_8,
+AFIO_EXTI_9,
+AFIO_EXTI_10,
+AFIO_EXTI_11,
+AFIO_EXTI_12,
+AFIO_EXTI_13,
+AFIO_EXTI_14,
+AFIO_EXTI_15,
+AFIO_EXTI_NUMBER_OF_LINES
+}AFIO_EXTI_LINE_t;
+
+ErrorState_t AFIO_u8SetEXTIConfiguration(AFIO_EXTI_LINE_t Copy_u8EXTILineId, u8 Copy_u8EXTIPortMap);
+
+#endif /* MAFIO_MAFIO_INT_H_ */

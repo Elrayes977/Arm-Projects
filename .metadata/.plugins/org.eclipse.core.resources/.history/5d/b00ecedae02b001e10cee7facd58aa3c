@@ -1,0 +1,68 @@
+/*
+ *
+	*****************************
+	Author:Abdelrahman Elrayes
+	Origin Date:16/7/2023
+	Version: 1.0.0
+	SWC:RCC
+
+	*****************************
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "ERROR_STATES.h"
+#include "MRCC_int.h"
+#include "MGPIO_int.h"
+#include "MSTK_int.h"
+#include "HLED_int.h"
+#include "HSWITCH_int.h"
+#include "HLEDMRX_int.h"
+void delay(u16 num);
+
+void main(void)
+{
+u8 arr[8]={55, 24, 36, 66, 126, 66, 66, 0};
+u64 arr2[8]={0, 17786079280, 9733085256, 6511831172, 6574721276, 9733015684, 17786079364, 0};
+	RCC_voidInitSystemClock();
+	RCC_voidEnablePeriphralCLK(APB2_IOPAEN);
+	RCC_voidEnablePeriphralCLK(APB2_IOPBEN);
+	RCC_voidEnablePeriphralCLK(APB2_IOPCEN);
+	MSTK_enInit();
+
+	HLEDMRX_voidInit();
+
+	//u8 value=1;
+
+  while(1){
+	 // HLEDMRX_voidDisplat(arr2);
+	  HLEDMRX_voidShiftDIsplay(arr2);
+	  /*  MGPIO_u8SetPortValue_L(GPIO_PORTA, 0b0010101000);
+	  MGPIO_u8SetPortValue_L(GPIO_PORTB, 0b0101000000);
+	  MSTK_enSetBusyWait(500);
+	  MGPIO_u8SetPortValue_L(GPIO_PORTA, 0b1010101100);
+	  MGPIO_u8SetPortValue_L(GPIO_PORTB, 0b0101010011);
+	  MSTK_enSetBusyWait(500);
+
+	  MSTK_enSetBusyWait(500);
+	  MGPIO_u8SetPortValue_L(GPIO_PORTA, 0b1111111111);
+	  MGPIO_u8SetPortValue_L(GPIO_PORTB, 0b0000000000);
+	  MSTK_enSetBusyWait(500);
+*/
+}
+}
+void delay(u16 num)
+{
+for(u16 i=0;i<num;i++)
+{
+	for(u16 j=0;j<num;j++)
+	{
+		asm("NOP");
+	}
+
+
+
+}
+
+
+
+}

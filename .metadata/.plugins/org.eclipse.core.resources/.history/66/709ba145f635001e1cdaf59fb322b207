@@ -1,0 +1,44 @@
+
+/*
+ *
+	*****************************
+	Author:Abdelrahman Elrayes
+	Origin Date:3/8/2023
+	Version: 1.0.0
+	SWC:UART
+
+	*****************************
+ */
+#ifndef MUART_MUART_INT_H_
+#define MUART_MUART_INT_H_
+void MUSART_voidInit(void);
+void MUSART_voidTransmit(u8 Copy_u8arr[]);
+u8 MUSART_u8ReceiveBusyWait(void);
+
+//----------------------------//
+
+ErrorState_t MUSART1_enSendByteBusywait(u8 data ) ;
+ErrorState_t MUSART1_enRecieveByteBusyw8(u8* data) ;
+
+ErrorState_t MUSART1_u8SendByteAsynch(u8 data) ;
+ErrorState_t MUSART1_u8RecieveByteAsynch(void) ;
+
+ErrorState_t MUSART1_u8SendStringBasyW8(char* data) ;
+ErrorState_t MUSART1_u8RecieveStringBasyW8(u8* data) ;
+
+ErrorState_t MUSART1_u8EnterruptEnRX(void);
+ErrorState_t MUSART1_u8EnterruptDsRX(void);
+ErrorState_t MUSART1_u8EnterruptCallBackRX(void);
+
+ErrorState_t MUSART1_u8EnterruptEnTX(void);
+ErrorState_t MUSART1_u8EnterruptDsTX(void);
+ErrorState_t MUSART1_u8EnterruptCallBackTX(void);
+
+ErrorState_t MUSART1_u8SendNumString(u32 copy_u32num);
+ErrorState_t MUSART1_u8SendNum(u32 copy_u32num);
+
+void UART1_Runnable(void);
+u8 UART1_IsDataReady(void);
+void UART1_GETdata(u8 *UART1ptrStr, u16 *UART1ptrNum);
+//u8 MUSART_u8ReceiveByte()
+#endif /* MUART_MUART_INT_H_ */

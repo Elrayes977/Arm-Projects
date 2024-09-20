@@ -1,0 +1,4 @@
+"Src/MGPIO_prg.o"
+"Src/MRCC_prg.o"
+"Src/main.o"
+"Startup/startup_stm32f103c8tx.o"

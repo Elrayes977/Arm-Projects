@@ -1,0 +1,26 @@
+23:25:47 **** Incremental Build of configuration Debug for project MGPIO_TEST ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:19:6: warning: return type of 'main' is not 'int' [-Wmain]
+   19 | void main(void)
+      |      ^~~~
+arm-none-eabi-gcc -o "MGPIO_TEST.elf" @"objects.list"   -mcpu=cortex-m3 -T"F:\All emportant studies\NTI-embedded\ARM\NTI\MY workspace\MGPIO_TEST\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MGPIO_TEST.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MGPIO_TEST.elf
+ 
+arm-none-eabi-objdump -h -S  MGPIO_TEST.elf  > "MGPIO_TEST.list"
+arm-none-eabi-objcopy  -O ihex  MGPIO_TEST.elf  "MGPIO_TEST.hex"
+arm-none-eabi-objcopy  -O binary  MGPIO_TEST.elf  "MGPIO_TEST.bin"
+arm-none-eabi-size   MGPIO_TEST.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1576	      8	   1568	   3152	    c50	MGPIO_TEST.elf
+Finished building: default.size.stdout
+Finished building: MGPIO_TEST.hex
+Finished building: MGPIO_TEST.bin
+Finished building: MGPIO_TEST.list
+ 
+ 
+ 
+ 
+
+23:25:48 Build Finished. 0 errors, 1 warnings. (took 608ms)
+

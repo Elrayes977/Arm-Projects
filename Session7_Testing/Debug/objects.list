@@ -1,0 +1,4 @@
+"APP/main.o"
+"MCAL/MGPIO/MGPIO_prg.o"
+"MCAL/MRCC/MRCC_prg.o"
+"Startup/startup_stm32f103c8tx.o"

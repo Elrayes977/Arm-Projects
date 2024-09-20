@@ -1,0 +1,217 @@
+
+
+/*
+ *
+	*****************************
+	Author:Abdelrahman Elrayes
+	Origin Date:3/8/2023
+	Version: 1.0.0
+	SWC:UART
+
+	*****************************
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "ERROR_STATES.h"
+#include "STM32F103C8.h"
+/***********USART*************/
+#include "MUART_priv.h"
+#include "MUART_config.h"
+#include "MUART_int.h"
+
+static volatile u8 USART1_u8GlobalFrame[UART_FRAME_SIZE] = { 0 };
+static volatile u8 USART1_u8index = 0;
+static volatile u8 USART1_u8EndFrameRecieved = 0;
+
+static char USART1_StringRX[UART_STR_SIZE] = { 0 };
+static u16 USART1_MUNRX = 0;
+
+static u8 USART1_DataReady = 0;
+
+void MUSART1_voidInit(void)
+{
+
+	/*Set buad rate 9600->>0x341*/
+	//USART1->USART_BRR=0x341;
+
+	/*
+	 * Enable RX
+	 * Enable TX
+	 * Enable Usart
+	 */
+	//SET_BIT(USART1->USART_CR1,2);
+	//SET_BIT(USART1->USART_CR1,3);
+	//SET_BIT(USART1->USART_CR1,13);
+
+
+	/*clear status register*/
+	//USART1->USART_SR=0;
+
+
+
+	/******** baud rate **********/
+	USART1->USART_BRR = BAUDRATE;
+
+	/******** frame format *******/
+//no parity
+	CLR_BIT(USART1->USART_CR1, PCE);
+// 1 start 8bit data n stop
+	CLR_BIT(USART1->USART_CR1, M );
+// 1 stop bit
+	CLR_BIT(USART1->USART_CR2, StOP_0);
+	CLR_BIT(USART1->USART_CR2, StOP_1);
+
+	/******** enable RX **********/
+	SET_BIT(USART1->USART_CR1, RE);
+	/******** enable TX **********/
+	SET_BIT(USART1->USART_CR1, TE);
+	/*********UART enable ********/
+	SET_BIT(USART1->USART_CR1, UE);
+	// clr status reg
+	USART1->USART_SR = 0;
+
+
+}
+
+/*
+void MUSART_voidTransmit(u8 Copy_u8arr[])
+{
+u8 counter=0;
+
+while(Copy_u8arr[counter]!='\0')
+{
+	USART1->USART_DR=Copy_u8arr[counter];
+
+	while(GET_BIT(USART1->USART_SR,6)==0);
+
+	counter++;
+
+}
+
+
+
+}
+u8 MUSART_u8ReceiveBusyWait(void)
+{
+	while(GET_BIT(USART1->USART_SR,5)==0);
+
+
+
+return (0xFF&USART1->USART_DR); //first 8 bits only
+
+}
+*/
+
+ErrorState_t MUSART1_enSendByteBusywait(u8 Copy_u8Byte) {
+
+
+
+}
+ErrorState_t MUSART1_enRecieveByteBusyw8(u8 * Copy_ptrByte)
+{
+
+
+}
+
+ErrorState_t MUSART1_enSendByteAsynch(u8 Copy_u8Byte)
+{
+
+
+}
+ErrorState_t MUSART1_enRecieveByteAsynch(void)
+{
+
+
+
+}
+
+ErrorState_t MUSART1_enSendStringBasyW8(char*  Copy_ptrString)
+{
+
+
+
+}
+ErrorState_t MUSART1_enRecieveStringBasyW8(u8 * Copy_ptrString)
+{
+
+
+
+}
+
+ErrorState_t MUSART1_enInterruptEnRX(void)
+{
+
+
+}
+ErrorState_t MUSART1_enInterruptDsRX(void)
+{
+
+
+
+
+}
+ErrorState_t MUSART1_enInterruptCallBackRX(void)
+{
+
+
+}
+
+ErrorState_t MUSART1_enInterruptEnTX(void)
+{
+
+
+}
+ErrorState_t MUSART1_enInterruptDsTX(void)
+{
+
+
+
+
+
+}
+ErrorState_t MUSART1_enInterruptCallBackTX(void)
+{
+
+
+
+}
+
+ErrorState_t MUSART1_enSendNumString(u32 copy_u32num)
+{
+
+
+
+}
+ErrorState_t MUSART1_enSendNum(u32 copy_u32num)
+{
+
+
+
+
+
+}
+
+void MUSART1_Runnable(void)
+{
+
+
+
+}
+
+u8 MUSART1_IsDataReady(void)
+{
+
+
+
+
+}
+void MUSART1_GETdata(u8 *UART1ptrStr, u16 *USART1ptrNum)
+{
+
+
+
+
+}
+
+
+

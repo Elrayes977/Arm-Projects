@@ -1,0 +1,30 @@
+15:35:26 **** Incremental Build of configuration Debug for project ARM_TESTING101 ****
+make -j12 all 
+arm-none-eabi-gcc "../APP/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_TESTING101/MCAL/MAFIO" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_TESTING101/MCAL/MEXTI" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_TESTING101/MCAL/MNVIC" -I../Inc -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_TESTING101/HAL/HLED_MRX" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_TESTING101/MCAL/MSysTick" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_TESTING101/HAL/HSWITCH" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_TESTING101/HAL/LED" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_TESTING101/MCAL/MGPIO" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_TESTING101/MCAL/MRCC" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_TESTING101/HAL" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_TESTING101/LIB" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_TESTING101/MCAL" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"APP/main.d" -MT"APP/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "APP/main.o"
+../APP/main.c:42:6: warning: return type of 'main' is not 'int' [-Wmain]
+   42 | void main(void)
+      |      ^~~~
+../APP/main.c: In function 'main':
+../APP/main.c:45:4: warning: unused variable 'arr' [-Wunused-variable]
+   45 | u8 arr[8]={55, 24, 36, 66, 126, 66, 66, 0};
+      |    ^~~
+arm-none-eabi-gcc -o "ARM_TESTING101.elf" @"objects.list"   -mcpu=cortex-m3 -T"F:\All emportant studies\NTI-embedded\ARM\NTI\MY workspace\ARM_TESTING101\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ARM_TESTING101.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ARM_TESTING101.elf
+ 
+arm-none-eabi-objdump -h -S  ARM_TESTING101.elf  > "ARM_TESTING101.list"
+arm-none-eabi-objcopy  -O ihex  ARM_TESTING101.elf  "ARM_TESTING101.hex"
+arm-none-eabi-objcopy  -O binary  ARM_TESTING101.elf  "ARM_TESTING101.bin"
+arm-none-eabi-size   ARM_TESTING101.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4528	      8	   1640	   6176	   1820	ARM_TESTING101.elf
+Finished building: default.size.stdout
+Finished building: ARM_TESTING101.hex
+Finished building: ARM_TESTING101.bin
+ 
+Finished building: ARM_TESTING101.list
+ 
+ 
+ 
+
+15:35:27 Build Finished. 0 errors, 2 warnings. (took 660ms)
+

@@ -1,0 +1,77 @@
+15:52:02 **** Incremental Build of configuration Debug for project ARM_Labs ****
+make -j12 all 
+arm-none-eabi-gcc "../APP/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_Labs/MCAL/MAFIO" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_Labs/MCAL/MEXTI" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_Labs/MCAL/MNVIC" -I../Inc -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_Labs/HAL/HLED_MRX" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_Labs/MCAL/MSysTick" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_Labs/HAL/HSWITCH" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_Labs/HAL/LED" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_Labs/MCAL/MGPIO" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_Labs/MCAL/MRCC" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_Labs/HAL" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_Labs/LIB" -I"F:/All emportant studies/NTI-embedded/ARM/NTI/MY workspace/ARM_Labs/MCAL" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"APP/main.d" -MT"APP/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "APP/main.o"
+../APP/main.c:48:6: warning: return type of 'main' is not 'int' [-Wmain]
+   48 | void main(void)
+      |      ^~~~
+../APP/main.c: In function 'main':
+../APP/main.c:54:26: warning: missing braces around initializer [-Wmissing-braces]
+   54 | MOVING_ST_t structarr[8]={{0, 14, 14, 4, 14, 4, 10, 81},{0, 28, 28, 8, 28, 8, 20, 98},{0, 28, 28, 8, 28, 8, 84, 34},{0, 28, 28, 8, 28, 72, 52, 2},{0, 28, 28, 8, 92, 8, 52, 2},
+      |                          ^
+      |                            {                          }
+../APP/main.c:54:26: warning: missing braces around initializer [-Wmissing-braces]
+   54 | MOVING_ST_t structarr[8]={{0, 14, 14, 4, 14, 4, 10, 81},{0, 28, 28, 8, 28, 8, 20, 98},{0, 28, 28, 8, 28, 8, 84, 34},{0, 28, 28, 8, 28, 72, 52, 2},{0, 28, 28, 8, 92, 8, 52, 2},
+      |                          ^
+      |                            {                          }  {                          }
+../APP/main.c:54:26: warning: missing braces around initializer [-Wmissing-braces]
+   54 | MOVING_ST_t structarr[8]={{0, 14, 14, 4, 14, 4, 10, 81},{0, 28, 28, 8, 28, 8, 20, 98},{0, 28, 28, 8, 28, 8, 84, 34},{0, 28, 28, 8, 28, 72, 52, 2},{0, 28, 28, 8, 92, 8, 52, 2},
+      |                          ^
+      |                            {                          }  {                          }  {                          }
+../APP/main.c:54:26: warning: missing braces around initializer [-Wmissing-braces]
+   54 | MOVING_ST_t structarr[8]={{0, 14, 14, 4, 14, 4, 10, 81},{0, 28, 28, 8, 28, 8, 20, 98},{0, 28, 28, 8, 28, 8, 84, 34},{0, 28, 28, 8, 28, 72, 52, 2},{0, 28, 28, 8, 92, 8, 52, 2},
+      |                          ^
+      |                            {                          }  {                          }  {                          }  {                          }
+../APP/main.c:54:26: warning: missing braces around initializer [-Wmissing-braces]
+   54 | MOVING_ST_t structarr[8]={{0, 14, 14, 4, 14, 4, 10, 81},{0, 28, 28, 8, 28, 8, 20, 98},{0, 28, 28, 8, 28, 8, 84, 34},{0, 28, 28, 8, 28, 72, 52, 2},{0, 28, 28, 8, 92, 8, 52, 2},
+      |                          ^
+      |                            {                          }  {                          }  {                          }  {                          }  {                         }
+../APP/main.c:54:26: warning: missing braces around initializer [-Wmissing-braces]
+   54 | MOVING_ST_t structarr[8]={{0, 14, 14, 4, 14, 4, 10, 81},{0, 28, 28, 8, 28, 8, 20, 98},{0, 28, 28, 8, 28, 8, 84, 34},{0, 28, 28, 8, 28, 72, 52, 2},{0, 28, 28, 8, 92, 8, 52, 2},
+      |                          ^
+      |                            {                          }  {                          }  {                          }  {                          }  {                         }
+   55 |       {0, 28, 28, 8, 92, 8, 20, 34},{0, 28, 28, 8, 28, 72, 20, 34},{0, 28, 28, 8, 28, 8, 84, 34}};
+      |        {                          }
+../APP/main.c:54:26: warning: missing braces around initializer [-Wmissing-braces]
+   54 | MOVING_ST_t structarr[8]={{0, 14, 14, 4, 14, 4, 10, 81},{0, 28, 28, 8, 28, 8, 20, 98},{0, 28, 28, 8, 28, 8, 84, 34},{0, 28, 28, 8, 28, 72, 52, 2},{0, 28, 28, 8, 92, 8, 52, 2},
+      |                          ^
+      |                            {                          }  {                          }  {                          }  {                          }  {                         }
+   55 |       {0, 28, 28, 8, 92, 8, 20, 34},{0, 28, 28, 8, 28, 72, 20, 34},{0, 28, 28, 8, 28, 8, 84, 34}};
+      |        {                          }  {                           }
+../APP/main.c:54:26: warning: missing braces around initializer [-Wmissing-braces]
+   54 | MOVING_ST_t structarr[8]={{0, 14, 14, 4, 14, 4, 10, 81},{0, 28, 28, 8, 28, 8, 20, 98},{0, 28, 28, 8, 28, 8, 84, 34},{0, 28, 28, 8, 28, 72, 52, 2},{0, 28, 28, 8, 92, 8, 52, 2},
+      |                          ^
+      |                            {                          }  {                          }  {                          }  {                          }  {                         }
+   55 |       {0, 28, 28, 8, 92, 8, 20, 34},{0, 28, 28, 8, 28, 72, 20, 34},{0, 28, 28, 8, 28, 8, 84, 34}};
+      |        {                          }  {                           }  {                          }
+../APP/main.c:54:26: warning: missing braces around initializer [-Wmissing-braces]
+   54 | MOVING_ST_t structarr[8]={{0, 14, 14, 4, 14, 4, 10, 81},{0, 28, 28, 8, 28, 8, 20, 98},{0, 28, 28, 8, 28, 8, 84, 34},{0, 28, 28, 8, 28, 72, 52, 2},{0, 28, 28, 8, 92, 8, 52, 2},
+      |                          ^
+      |                            {                          }  {                          }  {                          }  {                          }  {                         }
+   55 |       {0, 28, 28, 8, 92, 8, 20, 34},{0, 28, 28, 8, 28, 72, 20, 34},{0, 28, 28, 8, 28, 8, 84, 34}};
+      |        {                          }  {                           }  {                          }
+../APP/main.c:52:5: warning: unused variable 'arr2' [-Wunused-variable]
+   52 | u64 arr2[8]={0, 553233, 1348243, 2266197, 4102105, 2266193, 2258001, 0};
+      |     ^~~~
+../APP/main.c:51:4: warning: unused variable 'arr' [-Wunused-variable]
+   51 | u8 arr[8]={55, 24, 36, 66, 126, 66, 66, 0};
+      |    ^~~
+arm-none-eabi-gcc -o "ARM_Labs.elf" @"objects.list"   -mcpu=cortex-m3 -T"F:\All emportant studies\NTI-embedded\ARM\NTI\MY workspace\ARM_Labs\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ARM_Labs.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ARM_Labs.elf
+ 
+arm-none-eabi-objdump -h -S  ARM_Labs.elf  > "ARM_Labs.list"
+arm-none-eabi-objcopy  -O ihex  ARM_Labs.elf  "ARM_Labs.hex"
+arm-none-eabi-objcopy  -O binary  ARM_Labs.elf  "ARM_Labs.bin"
+arm-none-eabi-size   ARM_Labs.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4436	     12	   1636	   6084	   17c4	ARM_Labs.elf
+Finished building: default.size.stdout
+Finished building: ARM_Labs.hex
+Finished building: ARM_Labs.bin
+ 
+Finished building: ARM_Labs.list
+ 
+ 
+ 
+
+15:52:02 Build Finished. 0 errors, 12 warnings. (took 586ms)
+

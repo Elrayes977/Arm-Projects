@@ -1,0 +1,70 @@
+
+
+/*
+ *
+	*****************************
+	Author:Abdelrahman Elrayes
+	Origin Date:3/8/2023
+	Version: 1.0.0
+	SWC:UART
+
+	*****************************
+ */
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+#include "ERROR_STATES.h"
+#include "STM32F103C8.h"
+/***********STK*************/
+#include "MUART_priv.h"
+#include "MUART_config.h"
+#include "MUART_int.h"
+
+void MUSART_voidInit(void)
+{
+	/*Set buad rate 9600->>0x341*/
+	USART1->USART_BRR=0x341;
+
+	/*
+	 * Enable RX
+	 * Enable TX
+	 * Enable Usart
+	 */
+	SET_BIT(USART1->USART_CR1,2);
+	SET_BIT(USART1->USART_CR1,3);
+	SET_BIT(USART1->USART_CR1,13);
+
+
+	/*clear status register*/
+	USART1->USART_SR=0;
+
+
+}
+
+void MUSART_voidTransmit(u8 Copy_u8arr[])
+{
+u8 counter=0;
+
+while(Copy_u8arr[counter]!='\0')
+{
+	USART1->USART_DR=Copy_u8arr[counter];
+
+	while(GET_BIT(USART1->USART_SR,6)==0);
+
+	counter++;
+
+}
+
+
+
+}
+u8 MUSART_u8ReceiveBusyWait(void)
+{
+	while(GET_BIT(USART1->USART_SR,5)==0);
+
+
+
+return (0xFF&USART1->USART_DR); //first 8 bits only
+
+}
+
+
